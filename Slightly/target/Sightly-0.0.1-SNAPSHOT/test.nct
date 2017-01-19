@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="server/javascript">
+			var Person = Java.type('biz.netcentric.bean.Person');
+			var id = getParameterByName('id');
+			var person = Person.lookup(id);	
+		</script>
+		<title>${person.name}</title>
+	</head>
+	<body>
+		<h1 title="${person.name}" ${person.namesss}>${person.name}</h1 ${person.namess}>
+		<h2 data-if="person.married" title="${person.spouse}">Spouse:${person.spouse}</h2>
+		<div data-for-child="person.children">Child: ${child}</div>
+	</body>
+</html>
